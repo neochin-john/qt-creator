@@ -53,6 +53,7 @@ public:
     QVariant data(Utils::Id id) const override;
 
 private:
+    friend class AndroidExApkSignStep;
     void showInGraphicalShell();
 
     bool init() override;

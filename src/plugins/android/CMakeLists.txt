@@ -51,6 +51,9 @@ add_qtc_plugin(Android
     splashscreencontainerwidget.cpp splashscreencontainerwidget.h
     splashscreenwidget.cpp splashscreenwidget.h
     sdkmanageroutputparser.cpp sdkmanageroutputparser.h
+    androidexconstants.h
+    androidexbuildstep.cpp androidexbuildstep.h
+    androidexbuildmanager.cpp androidexbuildmanager.h
 )
 
 extend_qtc_plugin(Android

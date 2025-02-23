@@ -14,6 +14,11 @@ QtcPlugin {
     Depends { name: "Utils" }
 
     files: [
+        "androidexbuildmanager.cpp",
+        "androidexbuildmanager.h",
+        "androidexbuildstep.cpp",
+        "androidexbuildstep.h",
+        "androidexconstants.h",
         "androidtr.h",
         "android.qrc",
         "androidavdmanager.cpp",
@@ -107,7 +112,7 @@ QtcPlugin {
         "splashscreenwidget.cpp",
         "splashscreenwidget.h",
         "sdkmanageroutputparser.cpp",
-        "sdkmanageroutputparser.h"
+        "sdkmanageroutputparser.h",
     ]
 
     QtcTestFiles {
