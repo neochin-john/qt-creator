@@ -20,6 +20,8 @@
 #include "androidsettingswidget.h"
 #include "androidtoolchain.h"
 #include "androidtr.h"
+#include "androidexbuildstep.h"
+#include "androidexbuildmanager.h"
 
 #ifdef WITH_TESTS
 #  include "androidsdkmanager_test.h"
@@ -94,6 +96,11 @@ public:
     AndroidQmlPreviewWorkerFactory qmlPreviewWorkerFactory;
     AndroidBuildApkStepFactory buildApkStepFactory;
     AndroidDeviceManager deviceManager;
+    AndroidExAssetsMakeConfigStepFactory exAssetsMakeConfigStepFactory;
+    AndroidExAssetsCmdConfigStepFactory exAssetsCmdConfigStepFactory;
+    AndroidExAssetsCopyConfigStepFactory exAssetsCopyConfigStepFactory;
+    AndroidExAssetsCleanConfigStepFactory exAssetsCleanConfigStepFactory;
+    AndroidExBuildManager buildManager;
 };
 
 AndroidPlugin::~AndroidPlugin()
@@ -117,6 +124,8 @@ void AndroidPlugin::initialize()
     addTest<AndroidSdkManagerTest>();
     addTest<SdkManagerOutputParserTest>();
 #endif
+
+    AndroidExBuildManager::instance()->init();
 }
 
 void AndroidPlugin::kitsRestored()
